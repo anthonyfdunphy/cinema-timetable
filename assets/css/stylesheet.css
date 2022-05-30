@@ -17,6 +17,7 @@ body{
     grid-template-rows: 1fr 1fr minmax(50px, 0.3fr);
 }
 
+/* class created for template of each row*/
 .film{
     display: flex;
     align-items: center;
@@ -24,10 +25,22 @@ body{
     background-color: aqua;
 }
 
+/* styling for font on h1 */
 .film h1{
     font-size: 2.5vw;
 }
 
-#top{
+/* top movie row styling*/
+.top{
     background-color: brown;
+}
+
+/* bottom movie row styling*/
+.bottom{
+    background-color: red;
+}
+
+/* footer styling for ucd */
+.footer{
+    background-color: orange;
 }
