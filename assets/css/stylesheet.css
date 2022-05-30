@@ -36,16 +36,27 @@ body{
 }
 
 /* top movie row styling*/
-.top{
+.top {
+    position: relative;
+    height: 100%;
     background-image: url(/assets//images/week1.jpeg);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      0 calc(100% - 5vw)
+    );
+    /* change the calc height to a percentage height to get alternate responsive behavior*/
 }
 
 /* bottom movie row styling*/
-.bottom{
+.bottom {
+    margin-top: -5vw;
     background-image: url(/assets//images/week2.jpg);
 }
 
 /* footer styling for ucd */
 .footer{
+    font-size: 1.5vw;
     background-color: red;
 }
