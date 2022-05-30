@@ -9,3 +9,25 @@ body{
     height: 100vh;
     background-color: blue;
 }
+
+.grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 1fr 1fr minmax(50px, 0.3fr);
+}
+
+.film{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.film h1{
+    font-size: 2.5vw;
+}
+
+#top{
+    background-color: brown;
+}
