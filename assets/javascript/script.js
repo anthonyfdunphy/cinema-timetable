@@ -2,7 +2,7 @@
 const monthByName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September','October', 'November', 'December'];
 
 /* array of images*/
-const filmImages = ['.assets/images/week1.jpeg', '.assets/images/week2.jpg', '.assets/images/week3.jpg', '.assets/images/week4.jpg', '.assets/images/week5.jpg'];
+const filmImages = ['.assets/images/week1.jpeg', 'assets/images/week2.jpg', '.assets/images/week3.jpg', '.assets/images/week4.jpg', '.assets/images/week5.jpg'];
 
 /* code to work out which week of the month it is */
 const d = new Date();
@@ -48,6 +48,10 @@ for (var i =0; i < filmSchedule.length; i++){
         document.getElementById('bottom-h1').innerHTML = filmSchedule[i].titleBottom;
 
         /* add image to top and bottom img banners */
+        document.getElementById('top').style.backgroundImage = url('(filmImages[3])');
+
+        console.log(filmImages[3])
         
     }
 }
+
