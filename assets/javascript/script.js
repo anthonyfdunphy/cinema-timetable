@@ -17,22 +17,23 @@ const filmSchedule = [
     },
     {
         startMonth: 'April', 
-        titleTop: 'AprilBatman', 
-        titleBottom: 'AprilAmbulance'
+        titleTop: 'Sing 2', 
+        titleBottom: 'Morbius'
     },
     {
         startMonth: 'May', 
-        titleTop: 'MayBatman', 
-        titleBottom: 'MayAmbulance'},
+        titleTop: 'Batman', 
+        titleBottom: 'Enchanto'
+    },
     {
         startMonth: 'June', 
-        titleTop: 'JuneBatman', 
-        titleBottom: 'JuneAmbulance'
+        titleTop: 'Top Gun: Maverick', 
+        titleBottom: 'Jurassic World Dominion'
     },
     {
         startMonth: 'July', 
-        titleTop: 'JulyBatman', 
-        titleBottom: 'JulyAmbulance'
+        titleTop: 'Downton Abbey: A New Era', 
+        titleBottom: 'Ambulance'
     },
 ]
 
@@ -40,5 +41,6 @@ const filmSchedule = [
 for (var i =0; i < filmSchedule.length; i++){
     if(filmSchedule[i].startMonth == monthByName[month]){
         document.getElementById('top-h1').innerHTML = filmSchedule[i].titleTop;
+        document.getElementById('bottom-h1').innerHTML = filmSchedule[i].titleBottom;
     }
 }
