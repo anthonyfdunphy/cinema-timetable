@@ -1,5 +1,8 @@
 /* array of month names*/
-const monthByName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September','October', 'November', 'December']
+const monthByName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September','October', 'November', 'December'];
+
+/* array of images*/
+const filmImages = ['.assets/images/week1.jpeg', '.assets/images/week2.jpg', '.assets/images/week3.jpg', '.assets/images/week4.jpg', '.assets/images/week5.jpg'];
 
 /* code to work out which week of the month it is */
 const d = new Date();
@@ -40,7 +43,11 @@ const filmSchedule = [
 /* loop to cycle through array and match current month to film title*/
 for (var i =0; i < filmSchedule.length; i++){
     if(filmSchedule[i].startMonth == monthByName[month]){
+        /* add text to top and bottom h1 tags */
         document.getElementById('top-h1').innerHTML = filmSchedule[i].titleTop;
         document.getElementById('bottom-h1').innerHTML = filmSchedule[i].titleBottom;
+
+        /* add image to top and bottom img banners */
+        
     }
 }
