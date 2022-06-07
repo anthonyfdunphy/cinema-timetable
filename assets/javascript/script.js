@@ -2,7 +2,7 @@
 const monthByName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September','October', 'November', 'December'];
 
 /* array of images*/
-const filmImages = ['/assets//images/week1.jpeg', '/assets//images/week2.jpg', '/assets//images/week3.jpg', '/assets//images/week4.jpeg', '/assets//images/week5.jpeg'];
+const filmImages = ['/assets//images/week1.jpeg', '/assets//images/week2.jpg', '/assets//images/week3.jpg', '/assets//images/week4.jpeg', '/assets//images/week5.jpeg', '/assets//images/week6.jpeg', '/assets//images/week7.jpg', '/assets//images/week8.jpeg'];
 
 /* code to work out which week of the month it is */
 const d = new Date();
@@ -15,43 +15,53 @@ const month = d.getMonth();
 const filmSchedule = [
     {
         startMonth: 'March', 
-        titleTop: 'MarchBatman', 
-        titleBottom: 'MarchAmbulance'
+        titleTop: 'Batman', 
+        titleBottom: 'Ambulance',
+        topImage: filmImages[0],
+        bottomImage: filmImages[1] 
     },
     {
         startMonth: 'April', 
-        titleTop: 'Sing 2', 
-        titleBottom: 'Morbius'
+        titleTop: 'Top Gun: Maverick', 
+        titleBottom: 'Jurassic World Dominion',
+        topImage: filmImages[2],
+        bottomImage: filmImages[3]
     },
     {
         startMonth: 'May', 
         titleTop: 'Batman', 
-        titleBottom: 'Enchanto'
+        titleBottom: 'Enchanto',
+        topImage: filmImages[4],
+        bottomImage: filmImages[5]
     },
     {
         startMonth: 'June', 
-        titleTop: 'Top Gun: Maverick', 
-        titleBottom: 'Jurassic World Dominion'
+        titleTop: 'The Secrets of Dumbledore', 
+        titleBottom: 'Jurassic World Dominion',
+        topImage: filmImages[6],
+        bottomImage: filmImages[7]
     },
     {
         startMonth: 'July', 
         titleTop: 'Downton Abbey: A New Era', 
-        titleBottom: 'Ambulance'
+        titleBottom: 'Ambulance',
+        topImage: filmImages[8],
+        bottomImage: filmImages[9]
     },
 ]
 
 /* loop to cycle through array and match current month to film title*/
-for (var i =0; i < filmSchedule.length; i++){
+for (let i =0; i < filmSchedule.length; i++){
     if(filmSchedule[i].startMonth == monthByName[month]){
         /* add text to top and bottom h1 tags */
         document.getElementById('top-h1').innerHTML = filmSchedule[i].titleTop;
         document.getElementById('bottom-h1').innerHTML = filmSchedule[i].titleBottom;
 
         /* add image to top and bottom img banners */
-        document.getElementById('top').style.backgroundImage = "url('" + filmImages[i] + "')";
-        document.getElementById('bottom').style.backgroundImage = "url('" + filmImages[i+1] + "')";
+        document.getElementById('top').style.backgroundImage = "url('" + filmSchedule[i].topImage + "')";
+        document.getElementById('bottom').style.backgroundImage = "url('" + filmSchedule[i].bottomImage + "')";
 
-        console.log(filmImages[3]);
+        console.log(monthByName[5]);
 
         
     }
